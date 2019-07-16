@@ -12,7 +12,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=true \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -24,9 +24,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Data modules
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.dev_name=rmnet_usb0 \
+    persist.data.netmgrd.qos.enable=true \
     persist.vendor.data.profile_update=true \
     persist.vendor.data.mode=concurrent \
     ro.vendor.use_data_netmgrd=true
+
+# Display features
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.displayfeature.histogram.enable=true
 
 # Display post-processing
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -54,25 +59,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Netflix custom property
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.netflix.bsp_rev=Q845-05000-1
+    ro.netflix.bsp_rev=Q670-14477-1
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.core_ctl_min_cpu=2 \
-    ro.vendor.qti.core_ctl_max_cpu=4 \
-    vendor.iop.enable_prefetch_ofr=0 \
-    vendor.iop.enable_uxe=0
+    ro.vendor.qti.core_ctl_min_cpu=4 \
+    ro.vendor.qti.core_ctl_max_cpu=6
 
 # RCS and IMS
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.rcs.supported=0 \
-    persist.vendor.ims.disableUserAgent=0
+    persist.rcs.supported=0
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
     persist.vendor.radio.atfwd.start=true \
-    persist.vendor.radio.flexmap_type=none \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
