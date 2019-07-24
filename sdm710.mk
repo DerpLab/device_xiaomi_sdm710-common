@@ -25,6 +25,9 @@ $(call inherit-product-if-exists, vendor/xiaomi/sdm710-common/sdm710-common-vend
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Properties
+-include $(LOCAL_PATH)/common-props.mk
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
