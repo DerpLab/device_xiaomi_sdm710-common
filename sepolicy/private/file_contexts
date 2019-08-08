@@ -12,9 +12,6 @@
 /firmware(/.*)?          u:object_r:firmware_file:s0
 /persist(/.*)?           u:object_r:persist_file:s0
 
-# Fingerprint related nodes
-/sys/devices/platform/soc/soc:fingerprint_goodix/proximity_state       u:object_r:sysfs_fp_proximity:s0
-
 # Fingerprint under display HAL
 /system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_sdm710    u:object_r:hal_fod_sdm710_exec:s0
 
@@ -30,6 +27,3 @@
 
 # Power HAL
 /system/lib64/hw/power\.qcom\.so    u:object_r:vendor_file:s0
-
-# Trust HAL
-/system/bin/hw/lineage\.trust@1\.0-service                             u:object_r:shal_lineage_trust_default_exec:s0
